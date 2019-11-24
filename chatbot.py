@@ -1,0 +1,64 @@
+### pip3 install nltk
+import nltk
+from nltk.stem.lancaster import LancasterStemmer
+stemmer = LancasterStemmer()
+
+import numpy
+import tensorflow as tf
+import tensorflow.keras as keras
+from tensorflow.keras.layers import Flatten, Dense, Dropout
+import random
+import json
+import pickle
+
+
+## for GPU
+gpu_options=tf.GPUOptions(per_process_gpu_memory_fraction=0.7)
+config=tf.ConfigProto(gpu_options=gpu_options, allow_soft_placement=True)
+sess = tf.Session(config=config)
+tf.keras.backend.set_session(sess)
+
+with open("intents.json") as file:
+    data = json.load(file)
+
+with open("data.pickle", "rb") as f:
+    words, labels, training, output = pickle.load(f)
+
+tf.reset_default_graph()
+
+# Load Model
+model = keras.models.load_model('model/chatbot_dnn.h5')
+
+def bag_of_words(s, words):
+    bag = [0 for _ in range(len(words))]
+
+    s_words = nltk.word_tokenize(s)
+    s_words = [stemmer.stem(word.lower()) for word in s_words]
+
+    for se in s_words:
+        for i, w in enumerate(words):
+            if w == se:
+                bag[i] = 1
+            
+    return numpy.array(bag)
+
+
+def chat():
+    print("Start talking with the bot (type quit to stop)!")
+    while True:
+        inp = input("You: ")
+        if inp.lower() == "quit":
+            break
+
+        results = model.predict(numpy.array([bag_of_words(inp, words)]))
+        print('confidence: '+str(numpy.max(results)*100))
+        results_index = numpy.argmax(results)
+        tag = labels[results_index]
+
+        for tg in data["intents"]:
+            if tg['tag'] == tag:
+                responses = tg['responses']
+
+        print(random.choice(responses))
+
+chat()
