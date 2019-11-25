@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 import tensorflow.keras as keras
-from tensorflow.keras import Dense
+from tensorflow.keras.layers import Dense
 
 # Generate Data
 X = np.linspace(-1, 1, 200)
