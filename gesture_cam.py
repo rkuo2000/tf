@@ -14,7 +14,8 @@ camera = cv2.VideoCapture(0)
 print(width, height)
 
 # Load Model
-model = load_model('model/gesture_cnn.h5')
+#model = load_model('model/gesture_cnn.h5')
+model = load_model('model/tl_gesture.h5')
 
 # Dictionary
 dict = {0: 'paper', 1: 'rock', 2: 'scissors'}	
