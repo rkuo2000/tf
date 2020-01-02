@@ -6,12 +6,11 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 
-num_classes = 3 # number of gestures
+num_classes = 5 # number of gestures
 target_size = (96,96)
 
 # Dataset 
-#train_dir = 'data/gesture'
-train_dir = 'data/game'
+train_dir = 'data/gesture'
 
 # Data Generator
 rescale = 1./255
