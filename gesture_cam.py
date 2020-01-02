@@ -32,7 +32,7 @@ while True:
     roi_bgr  = cv2.cvtColor(roi_gray, cv2.COLOR_GRAY2BGR)
     frame[top:bottom, left:right] = roi_bgr
 
-    res = cv2.resize(roi_gray, (96, 96), interpolation = cv2.INTER_CUBIC)
+    res = cv2.resize(roi_bgr, (96, 96), interpolation = cv2.INTER_CUBIC)
     x_data = res / 255.0
     x_data = x_data.reshape(1,96,96,3)
 
