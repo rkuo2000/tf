@@ -23,10 +23,6 @@ model = load_model('model/gesture_cnn.h5')
 # Dictionary
 dict = {0: 'down', 1: 'left', 2: 'right', 3: 'stop', 4: 'up'}
 
-# generate voice files
-#tts = gTTS('剪刀,石頭,布', lang='zh-tw')
-#tts.save('paper-rock-scissors.mp3')
-
 # read images
 img = cv2.imread('eyecheck.jpg')
 rows,cols = img.shape[:2]
