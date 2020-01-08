@@ -7,29 +7,18 @@ from tensorflow.keras.applications.mobilenet import preprocess_input
 from tensorflow.keras.layers import GlobalAveragePooling2D, Dense
 from tensorflow.keras.models import Model
 
-# prepare Dataset
-batch_size = 10
-
-train_dir = 'data/ham10000/train'
-val_dir   = 'data/ham10000/val'
+data_path = 'data/worms'
 # Data Generator
 train_datagen=ImageDataGenerator(preprocessing_function=preprocess_input)
-train_generator=train_datagen.flow_from_directory('./data/ham10000/train',
-        target_size=(224,224),
-        color_mode='rgb',
-        batch_size=batch_size,
-        class_mode='categorical',
-        shuffle=True)
-												
-val_datagen=ImageDataGenerator(preprocessing_function=preprocess_input)
-val_generator=val_datagen.flow_from_directory('./data/ham10000/val',
-        target_size=(224,224),
-        color_mode='rgb',
-        batch_size=batch_size,
-        class_mode='categorical',
-        shuffle=True)												
+train_generator=train_datagen.flow_from_directory(data_path,
+                                                target_size=(224,224),
+                                                color_mode='rgb',
+                                                batch_size=32,
+                                                class_mode='categorical',
+                                                shuffle=True)												
 
-num_classes = 7 
+num_classes = 4 
+prediction_labels = {0: "cabbage worm", 1: "corn earworm", 2: "cutworm", 3: "fall armyworm"}
 
 # use MobieNet V2 as base model
 base_model=keras.applications.mobilenet_v2.MobileNetV2(input_shape=(224,224,3),weights='imagenet',include_top=False) #imports the mobilenet model and discards the last 1000 neuron layer.
@@ -58,11 +47,9 @@ model.compile(loss='categorical_crossentropy', optimizer='adam',metrics=['accura
 model.summary()
 
 # Train Model (target is loss <0.01)
-num_epochs=30
+num_epochs=25
 step_size_train=train_generator.n//train_generator.batch_size
-step_size_val=val_generator.n//val_generator.batch_size
-model.fit_generator(generator=train_generator, steps_per_epoch=step_size_train, epochs=num_epochs,
-                    validation_data=val_generator, validation_steps=step_size_val)
+model.fit_generator(generator=train_generator, steps_per_epoch=step_size_train, epochs=num_epochs)
 
 # Save Model
-model.save('model/tl_skinlesion.h5')
+model.save('model/tl_worms4.h5')
