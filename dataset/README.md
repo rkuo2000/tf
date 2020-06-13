@@ -16,5 +16,5 @@
 ## nmt
 *download [deu.txt](https://github.com/pradeepkannan85/Translation/blob/master/deu.txt)* <br />
 *`$mv ~/Downloads/deu.txt ~/tf/dataset/nmt/deu-eng.txt`* <br />
-*download [fra-eng.txt]https://github.com/L1aoXingyu/seq2seq-translation/blob/master/data/eng-fra.txt* <br />
+*download [fra-eng.txt](https://github.com/L1aoXingyu/seq2seq-translation/blob/master/data/eng-fra.txt)* <br />
 *`$mv ~/Downloads/fra-eng.txt ~/tf/dataset/nmt.txt`* <br />
