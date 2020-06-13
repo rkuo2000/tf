@@ -12,3 +12,6 @@
 *`$unzip fer2013.zip`* <br />
 *`$cd ~/tf`* <br />
 *`$unzip fer2013.zip`* <br />
+
+## nmt
+*download [deu.txt](https://github.com/pradeepkannan85/Translation/blob/master/deu.txt)* <br />
