@@ -9,7 +9,7 @@ from tensorflow.keras.layers import Dense, Dropout, LSTM
 from tensorflow.keras.callbacks import LambdaCallback
 
 # load ascii text and covert to lowercase
-filename = "data/text/shakespeare.txt"
+filename = "dataset/text/shakespeare.txt"
 text = open(filename, encoding='utf-8').read()
 text = text.lower()
 print('corpus length:', len(text))
