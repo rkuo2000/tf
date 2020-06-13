@@ -1,4 +1,4 @@
-# Datasets
+# Dataset
 * Download dataset from website and copy zip file to ~/tf/dataset <br />
 
 ## CIFAR-10 (32x32 color image dataset)
