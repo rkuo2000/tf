@@ -1,6 +1,5 @@
 # Tensorflow 
 ## Tensorflow Installation (on Windows)
-* Install Microsoft **Visual Studio Community 2019 v16.0.4**
 * Install **Python 3.7** for Windows
 * Install nVidia **CUDA 10.1 & CuDNN 7.6** 
 * Install **Tensorflow** 
