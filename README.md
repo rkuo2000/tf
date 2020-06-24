@@ -17,34 +17,34 @@
 * run tensorboard : *`tensorboard --logdir=./`*
 * use Chrome to open http://localhost:6006
 ### Basic Machine Learning
-* one neuron network : *`python3 easy_net.py`*
-* ten neurons network: *`python3 hidden_net.py`*
+* one neuron network : *`python easy_net.py`*
+* ten neurons network: *`python hidden_net.py`*
 ### MNIST : Handwritten Number Recognition
-* plot data : *`python3 mnist_plotdata.py`*
-* DNN : *`python3 mnist.py`*
-* CNN : *`python3 mnist_cnn.py`*
+* plot data : *`python mnist_plotdata.py`*
+* DNN : *`python mnist.py`*
+* CNN : *`python mnist_cnn.py`*
 * load model to predict : <br />
-  *`python3 mnist_cnn_test.py`* (test data) <br />
-  *`python3 mnist_cnn_image.py`* (image file) <br />
-  *`python3 mnist_cnn_webcam.py`* (camera) <br />
+  *`python mnist_cnn_test.py`* (test data) <br />
+  *`python mnist_cnn_image.py`* (image file) <br />
+  *`python mnist_cnn_webcam.py`* (camera) <br />
 ### Fashion-MNIST : Fashion Wearing Recongition
-* CNN : *`python3 fashionmnist_cnn.py`*
+* CNN : *`python fashionmnist_cnn.py`*
 ### Emotion Detection : Facial Expression Recognition
 * Download the FER-2013 dataset from [here](https://anonfile.com/bdj3tfoeba/data_zip) and unzip it under data folder. 
 * change directory name from data/data to data/fer2013
-* To train the model, run *`python3 emotion_detection.py --mode train`*
-* To detect facial expression, run *`python3 emotion_detection.py --mode detect`* 
+* To train the model, run *`python emotion_detection.py --mode train`*
+* To detect facial expression, run *`python emotion_detection.py --mode detect`* 
 ### Object Detection
 * **Download Google Images** <br />
-*`python3 download_google_images.py bread`* <br />
+*`python download_google_images.py bread`* <br />
 * **Download a pretrained model** <br />
 *Download a pretrained model from* [TensorFlow Model Zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) <br />
 *`cd ~/models/research/object_detection`* <br />
 *`tar zxvf ~/Downloads/ssd_mobilenet_v2_coco_2018_03_29.tar.gz`* <br />
 * **Run Object_Detection** <br />
 *`cp ~/tf/Object_detection_*.py .`* <br />
-*`python3 Object_detection_image.py`* <br />
-*`python3 Object_detection_webcam.py`* <br />
+*`python Object_detection_image.py`* <br />
+*`python Object_detection_webcam.py`* <br />
 * **Export Frozen_Inference_Graph** <br />
 *`cp ~/tf/export_inference_graph.sh .`* <br />
 *`./export_inference_graph.sh training model.ckpt-????`* <br />
@@ -57,11 +57,11 @@
 ### Transfer Learning (on Windows)
 * **Transfer Learning using Keras Mobilenet V2** <br />
 *`cd ~/tf`* <br />
-*`python3 download_google_images.py "blue tit"`* (download dataset)<br />
-*`python3 download_google_images.py crow`*       (download dataset)<br />
-*`python3 transfer_learning_mobilenetv2.py`* (transfer learning) <br />
-*`python3 transfer_learning_image.py`*  (load model and test image file) <br />
-*`python3 transfer_learning_webcam.py`*  (load model and input from webcam ) <br />
+*`python download_google_images.py "blue tit"`* (download dataset)<br />
+*`python download_google_images.py crow`*       (download dataset)<br />
+*`python transfer_learning_mobilenetv2.py`* (transfer learning) <br />
+*`python transfer_learning_image.py`*  (load model and test image file) <br />
+*`python transfer_learning_webcam.py`*  (load model and input from webcam ) <br />
 * **Convert Keras model to TFLite** (for Android App) <br />
 *`./tflite_convert_h5.sh`* (convert tl_mobilenetv2.h5 to tl_mobilenetv2.tflite) <br />
 *`./tflite_convert_h5_quant.sh`* (convert tl_mobilenetv2.h5 to tl_mobilenetv2_quant.tflite) <br />
