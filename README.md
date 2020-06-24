@@ -1,20 +1,11 @@
 # Tensorflow 
 ## Tensorflow Installation (on Windows)
 * Install **Python 3.7** for Windows
-* Install nVidia **CUDA 10.1 & CuDNN 7.6** 
+* Install nVidia **CUDA 10.2 & CuDNN 7.6** 
 * Install **Tensorflow** 
   - *`pip install tensorflow-2.0.0-cp37-cp37m-win_amd64.whl`* <br />
-  **[Tensorflow 2.0.0 cpu for Windows10](https://github.com/fo40225/tensorflow-windows-wheel/blob/master/2.0.0/py37/CPU/avx2/)** <br />
-  **[Tensorflow 2.0.0 cpu for Windows7](https://github.com/fo40225/tensorflow-windows-wheel/blob/master/2.0.0/py37/CPU/sse2/)** <br />
-  - *`pip install tensorflow_gpu-2.0.0-cp37-cp37m-win_amd64.whl`* <br />
-  **[Tensorflow 2.0.0 gpu for Windows10](https://github.com/fo40225/tensorflow-windows-wheel/blob/master/2.0.0/py37/GPU/cuda101cudnn76avx2/)** <br />
-  **[Tensorflow 2.0.0 gpu for Windows7](https://github.com/fo40225/tensorflow-windows-wheel/blob/master/2.0.0/py37/GPU/cuda101cudnn76sse2/)** <br />
-  - *`pip install tensorflow-1.14.0-cp37-cp37m-win_amd64.whl`* <br />
-  **[Tensorflow 1.14.0 cpu for Windows10](https://github.com/fo40225/tensorflow-windows-wheel/tree/master/1.14.0/py37/CPU/avx2/)** <br />   
-  **[Tensorflow 1.14.0 cpu for Windows7](https://github.com/fo40225/tensorflow-windows-wheel/blob/master/1.14.0/py37/CPU/sse2/)** <br />
-  - *`pip install tensorflow_gpu-1.14.0-cp37-cp37m-win_amd64.whl`* <br />
-  **[Tensorflow 1.14.0 gpu for Windows10](https://github.com/fo40225/tensorflow-windows-wheel/tree/master/1.14.0/py37/GPU/cuda101cudnn76avx2/)** <br />   
-  **[Tensorflow 1.14.0 gpu for Windows7](https://github.com/fo40225/tensorflow-windows-wheel/blob/master/1.14.0/py37/GPU/cuda101cudnn76sse2/)** <br />
+  **[Tensorflow 2.2.0 cpu for Windows10](https://github.com/fo40225/tensorflow-windows-wheel/blob/master/2.2.0/py37/CPU%2BGPU/cuda102cudnn76avx2)** <br />
+  **[Tensorflow 2.2.0 cpu for Windows7](https://github.com/fo40225/tensorflow-windows-wheel/blob/master/2.2.0/py37/CPU%2BGPU/cuda102cudnn76sse2)** <br />
  
   - **[tensorflow-optimized-wheels for linux](https://github.com/inoryy/tensorflow-optimized-wheels)**  <br />
 
