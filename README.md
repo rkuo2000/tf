@@ -3,7 +3,7 @@
 * Install **Python 3.7** for Windows
 * Install nVidia **CUDA 10.2 & CuDNN 7.6** 
 * Install **Tensorflow** 
-  - *`pip install tensorflow-2.0.0-cp37-cp37m-win_amd64.whl`* <br />
+  - *`pip install tensorflow-2.2.0-cp37-cp37m-win_amd64.whl`* <br />
   **[Tensorflow 2.2.0 cpu for Windows10](https://github.com/fo40225/tensorflow-windows-wheel/blob/master/2.2.0/py37/CPU%2BGPU/cuda102cudnn76avx2)** <br />
   **[Tensorflow 2.2.0 cpu for Windows7](https://github.com/fo40225/tensorflow-windows-wheel/blob/master/2.2.0/py37/CPU%2BGPU/cuda102cudnn76sse2)** <br />
  
