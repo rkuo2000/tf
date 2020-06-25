@@ -28,3 +28,10 @@
 *`$mv ~/Downloads/deu.txt ~/tf/dataset/nmt`* <br />
 * download [fra-eng.txt](https://github.com/L1aoXingyu/seq2seq-translation/blob/master/data/eng-fra.txt) <br />
 *`$mv ~/Downloads/fra-eng.txt ~/tf/dataset/nmt`* <br />
+
+## stock
+* get API-Key free from https://www.alphavantage.co/ <br />
+*`$pip install alpha_vantage`* <br />
+*`$cd ~/tf`* <br />
+*`$python download_stock_quote.py GOOGL`* <br />
+* GOOGLE.csv saved into ~/tf/dataset/stock <br />
