@@ -30,8 +30,9 @@
 *`$mv ~/Downloads/fra-eng.txt ~/tf/dataset/nmt`* <br />
 
 ## stock
-* get API-Key free from https://www.alphavantage.co/ <br />
+* get API-Key free from https://www.alphavantage.co/, and edit .py code <br />
 *`$pip install alpha_vantage`* <br />
 *`$cd ~/tf`* <br />
-*`$python download_stock_quote.py GOOGL`* <br />
+*`$nano download_stock_quote.py`* <br />
 * GOOGLE.csv saved into ~/tf/dataset/stock <br />
+*`$python download_stock_quote.py GOOGL`* <br />
