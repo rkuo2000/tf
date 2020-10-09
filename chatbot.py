@@ -17,8 +17,6 @@ with open("intents.json") as file:
 with open("data.pickle", "rb") as f:
     words, labels, training, output = pickle.load(f)
 
-tf.reset_default_graph()
-
 # Load Model
 model = keras.models.load_model('model/chatbot_dnn.h5')
 
