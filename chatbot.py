@@ -11,13 +11,6 @@ import random
 import json
 import pickle
 
-
-## for GPU
-gpu_options=tf.GPUOptions(per_process_gpu_memory_fraction=0.7)
-config=tf.ConfigProto(gpu_options=gpu_options, allow_soft_placement=True)
-sess = tf.Session(config=config)
-tf.keras.backend.set_session(sess)
-
 with open("intents.json") as file:
     data = json.load(file)
 
