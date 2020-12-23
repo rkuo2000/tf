@@ -7,14 +7,6 @@ from tensorflow.keras.applications.mobilenet import preprocess_input
 from tensorflow.keras.layers import GlobalAveragePooling2D, Dense
 from tensorflow.keras.models import Model
 
-tf.reset_default_graph()
-tf.keras.backend.clear_session()
-## for GPU
-config=tf.ConfigProto(allow_soft_placement=True)
-config.gpu_options.allow_growth = True
-sess = tf.Session(config=config)
-tf.keras.backend.set_session(sess)
-
 num_classes = 2 # number of folders under data/chest_xray
 target_size = (299,299)
 
