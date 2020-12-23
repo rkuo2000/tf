@@ -11,12 +11,6 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 import matplotlib.pyplot as plt
 
-## for GPU
-config=tf.ConfigProto(allow_soft_placement=True)
-config.gpu_options.allow_growth = True
-sess = tf.Session(config=config)
-tf.keras.backend.set_session(sess)
-
 model_path = 'model/pneumonia_cnn.h5'
 
 # Dataset Chest_Xray_Pnenumonia
