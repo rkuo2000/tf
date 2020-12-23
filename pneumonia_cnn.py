@@ -6,12 +6,6 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 
-## for GPU
-gpu_options=tf.GPUOptions(per_process_gpu_memory_fraction=0.7)
-config=tf.ConfigProto(gpu_options=gpu_options, allow_soft_placement=True)
-sess = tf.Session(config=config)
-tf.keras.backend.set_session(sess)
-
 #def dir_file_count(directory):
 #    return sum([len(files) for r, d, files in os.walk(directory)])
 	
