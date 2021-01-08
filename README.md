@@ -1,13 +1,10 @@
 # Tensorflow 
 ## Tensorflow Installation (on Windows)
-* Install **Python 3.7** for Windows
-* Install nVidia **CUDA 10.2 & CuDNN 7.6** 
+* Install **Python 3.8** for Windows
+* Install nVidia **CUDA 11.1 & CuDNN 8.x** 
 * Install **Tensorflow** 
   - *`pip install tensorflow-2.2.0-cp37-cp37m-win_amd64.whl`* <br />
-  **[Tensorflow 2.2.0 cpu for Windows10](https://github.com/fo40225/tensorflow-windows-wheel/blob/master/2.2.0/py37/CPU%2BGPU/cuda102cudnn76avx2)** <br />
-  **[Tensorflow 2.2.0 cpu for Windows7](https://github.com/fo40225/tensorflow-windows-wheel/blob/master/2.2.0/py37/CPU%2BGPU/cuda102cudnn76sse2)** <br />
- 
-  - **[tensorflow-optimized-wheels for linux](https://github.com/inoryy/tensorflow-optimized-wheels)**  <br />
+  **[Tensorflow 2.4.0 cpu for Windows10](https://github.com/fo40225/tensorflow-windows-wheel/tree/master/2.4.0/py38/CPU%2BGPU/cuda111cudnn8avx2)** <br />
 
 * Download Examples *`git clone https://github.com/rkuo2000/tf`*
 * Go to directory *`cd tf`*
@@ -34,26 +31,6 @@
 * change directory name from data/data to data/fer2013
 * To train the model, run *`python emotion_detection.py --mode train`*
 * To detect facial expression, run *`python emotion_detection.py --mode detect`* 
-### Object Detection
-* **Download Google Images** <br />
-*`python download_google_images.py bread`* <br />
-* **Download a pretrained model** <br />
-*Download a pretrained model from* [TensorFlow Model Zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) <br />
-*`cd ~/models/research/object_detection`* <br />
-*`tar zxvf ~/Downloads/ssd_mobilenet_v2_coco_2018_03_29.tar.gz`* <br />
-* **Run Object_Detection** <br />
-*`cp ~/tf/Object_detection_*.py .`* <br />
-*`python Object_detection_image.py`* <br />
-*`python Object_detection_webcam.py`* <br />
-* **Export Frozen_Inference_Graph** <br />
-*`cp ~/tf/export_inference_graph.sh .`* <br />
-*`./export_inference_graph.sh training model.ckpt-????`* <br />
-* **Convert TF model to TFLite** (for Android App) <br />
-*`cp ~/tf/tflite_*.sh .`* (copy shell files) <br />
-*`./tflite_export.sh`* (convert from model.ckpt to tflite_graph.pb) <br />
-*`./tflite_convert_pb.sh`* (convert tflite_graph.pb to model.tflite) <br />
-*`./tflite_convert_pb_quant.sh`* (convert tflite_graph.pb to model_quant.tflite) <br />
-
 ### Transfer Learning (on Windows)
 * **Transfer Learning using Keras Mobilenet V2** <br />
 *`cd ~/tf`* <br />
@@ -65,7 +42,15 @@
 * **Convert Keras model to TFLite** (for Android App) <br />
 *`./tflite_convert_h5.sh`* (convert tl_mobilenetv2.h5 to tl_mobilenetv2.tflite) <br />
 *`./tflite_convert_h5_quant.sh`* (convert tl_mobilenetv2.h5 to tl_mobilenetv2_quant.tflite) <br />
-
+### Convert to TFlite
+* **Export Frozen_Inference_Graph** <br />
+*`cp ~/tf/export_inference_graph.sh .`* <br />
+*`./export_inference_graph.sh training model.ckpt-????`* <br />
+* **Convert TF model to TFLite** (for Android App) <br />
+*`cp ~/tf/tflite_*.sh .`* (copy shell files) <br />
+*`./tflite_export.sh`* (convert from model.ckpt to tflite_graph.pb) <br />
+*`./tflite_convert_pb.sh`* (convert tflite_graph.pb to model.tflite) <br />
+*`./tflite_convert_pb_quant.sh`* (convert tflite_graph.pb to model_quant.tflite) <br />
 ### Edge TPU (USB Accelerator on RPi3B)
 * **Convert _quant.tflite to _quant_edgetpu.tflite** <br />
 * upload tl_mobilenetv2_quant.tflite to [EdgeTPU online compiler](https://coral.withgoogle.com/web-compiler/)<br />
