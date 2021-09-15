@@ -30,17 +30,6 @@
 * change directory name from data/data to data/fer2013
 * To train the model, run *`python emotion_detection.py --mode train`*
 * To detect facial expression, run *`python emotion_detection.py --mode detect`* 
-### Transfer Learning (on Windows)
-* **Transfer Learning using Keras Mobilenet V2** <br />
-*`cd ~/tf`* <br />
-*`python download_google_images.py "blue tit"`* (download dataset)<br />
-*`python download_google_images.py crow`*       (download dataset)<br />
-*`python transfer_learning_mobilenetv2.py`* (transfer learning) <br />
-*`python transfer_learning_image.py`*  (load model and test image file) <br />
-*`python transfer_learning_webcam.py`*  (load model and input from webcam ) <br />
-* **Convert Keras model to TFLite** (for Android App) <br />
-*`./tflite_convert_h5.sh`* (convert tl_mobilenetv2.h5 to tl_mobilenetv2.tflite) <br />
-*`./tflite_convert_h5_quant.sh`* (convert tl_mobilenetv2.h5 to tl_mobilenetv2_quant.tflite) <br />
 
 ### Edge TPU (USB Accelerator on RPi3B)
 * **Convert _quant.tflite to _quant_edgetpu.tflite** <br />
