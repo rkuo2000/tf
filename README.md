@@ -41,15 +41,7 @@
 * **Convert Keras model to TFLite** (for Android App) <br />
 *`./tflite_convert_h5.sh`* (convert tl_mobilenetv2.h5 to tl_mobilenetv2.tflite) <br />
 *`./tflite_convert_h5_quant.sh`* (convert tl_mobilenetv2.h5 to tl_mobilenetv2_quant.tflite) <br />
-### Convert to TFlite
-* **Export Frozen_Inference_Graph** <br />
-*`cp ~/tf/export_inference_graph.sh .`* <br />
-*`./export_inference_graph.sh training model.ckpt-????`* <br />
-* **Convert TF model to TFLite** (for Android App) <br />
-*`cp ~/tf/tflite_*.sh .`* (copy shell files) <br />
-*`./tflite_export.sh`* (convert from model.ckpt to tflite_graph.pb) <br />
-*`./tflite_convert_pb.sh`* (convert tflite_graph.pb to model.tflite) <br />
-*`./tflite_convert_pb_quant.sh`* (convert tflite_graph.pb to model_quant.tflite) <br />
+
 ### Edge TPU (USB Accelerator on RPi3B)
 * **Convert _quant.tflite to _quant_edgetpu.tflite** <br />
 * upload tl_mobilenetv2_quant.tflite to [EdgeTPU online compiler](https://coral.withgoogle.com/web-compiler/)<br />
