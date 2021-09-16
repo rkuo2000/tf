@@ -1,10 +1,10 @@
 # Tensorflow 
 ## Tensorflow Installation (on Windows)
 * Install **Python 3.8** for Windows
-* Install nVidia **CUDA 11.1 & CuDNN 8.x** 
+* Install nVidia **CUDA 11.4 & CuDNN 8.x** 
 * Install **Tensorflow** 
-  - download **[Tensorflow 2.4.0 cpu for Windows10](https://github.com/fo40225/tensorflow-windows-wheel/tree/master/2.4.0/py38/CPU%2BGPU/cuda111cudnn8avx2)** <br />
-  - *`pip install tensorflow-2.4.0-cp38-cp38-win_amd64.whl`* <br />
+  - download **[Tensorflow 2.4.6 cpu for Windows10](https://github.com/fo40225/tensorflow-windows-wheel/tree/master/2.6.0/py38/CPU%2BGPU)** <br />
+  - *`pip install tensorflow-2.6.0-cp38-cp38-win_amd64.whl`* <br />
 * Download Examples *`git clone https://github.com/rkuo2000/tf`*
 * Go to directory *`cd tf`*
 ## Tensorflow Sample Code
