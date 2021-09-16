@@ -31,15 +31,5 @@
 * To train the model, run *`python emotion_detection.py --mode train`*
 * To detect facial expression, run *`python emotion_detection.py --mode detect`* 
 
-### Edge TPU (USB Accelerator on RPi3B)
-* **Convert _quant.tflite to _quant_edgetpu.tflite** <br />
-* upload tl_mobilenetv2_quant.tflite to [EdgeTPU online compiler](https://coral.withgoogle.com/web-compiler/)<br />
-* download _quant_edgetput.tflite and copy to RPi3 <br />
-* **On RPi3B** <br />
-*`cd ~`* <br />
-*`git clone https://github.com/rkuo2000/tf`* (clone sample codes)<br />
-*`cd ~/tf`* <br />
-*`vi model/bird_labels.txt`* (create label file) <br />
-* To test the model : <br />
-*`python3 edgetpu_classify_webcam.py --model model/tl_mobilenetv2_quant.tflite --label model/bird_labels.txt`* <br />
-*`python3 edgetpu_classify_image.py --model model/tl_mobilenetv2_quant.tflite --label model/bird_labels.txt`* <br />
+### Jetson Nano
+[Jetson Nano 2GB](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit)
