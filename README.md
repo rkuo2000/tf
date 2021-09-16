@@ -38,4 +38,5 @@
 [Coronavirus Genome Identification](https://www.kaggle.com/rkuo2000/coronavirus-genome-identification)<br />
 [COVID-19 Pneumonia Detection](https://www.kaggle.com/rkuo2000/covid19-vgg16)<br />
 
-### Jetson Nano [Jetson Nano 2GB](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit)
+### Jetson Nano 
+[Jetson Nano 2GB](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit)<br />
