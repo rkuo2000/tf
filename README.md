@@ -30,6 +30,9 @@
 * change directory name from data/data to data/fer2013
 * To train the model, run *`python emotion_detection.py --mode train`*
 * To detect facial expression, run *`python emotion_detection.py --mode detect`* 
+### Pneumonia CNN : 
+* Train model: *`python pneumonia_cnn.py`* 
+* Test  model: *`python pneumonia_test.py`* 
 
 ### Jetson Nano
 [Jetson Nano 2GB](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit)
