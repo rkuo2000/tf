@@ -34,8 +34,9 @@
 * Train model: *`python pneumonia_cnn.py`* 
 * Test  model: *`python pneumonia_test.py`* 
 
-### COVID-19 Pneumonia Detection
-[COVID19 VGG16](https://www.kaggle.com/rkuo2000/covid19-vgg16)
+### COVID-19
+[Coronavirus Genome Identification](https://www.kaggle.com/rkuo2000/coronavirus-genome-identification)
+[COVID-19 Pneumonia Detection](https://www.kaggle.com/rkuo2000/covid19-vgg16)
 
 ### Jetson Nano
 [Jetson Nano 2GB](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit)
