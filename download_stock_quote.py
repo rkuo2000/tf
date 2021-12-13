@@ -8,4 +8,4 @@ symbol = sys.argv[1]
 
 ts = TimeSeries(key=API_KEY, output_format='pandas')
 data, meta_data = ts.get_daily(symbol, outputsize='full')
-data.to_csv(f'./datasets/stock/{symbol}.csv')
+data.to_csv(f'./datasets/stocks/{symbol}.csv')
