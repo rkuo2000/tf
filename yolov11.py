@@ -1,5 +1,5 @@
 ## pip install ultralytics
-# usage: python yolov10.py images/traffic.jpg
+# usage: python yolov11.py images/traffic.jpg
 
 from ultralytics import YOLO
 import sys
